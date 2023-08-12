@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.logo {
+    --height: 250px;
+    background-color: #000;
+    --line-width: 20px;
+    --line-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.line1 {
+    height: calc(var(--height) + calc(var(--line-width) * 2));
+    width: var(--line-width);
+    background-color: var(--line-color);
+    transform: skew(-45deg);
+}
+
+.line2 {
+    height: var(--height);
+    width: 40px;
+    background-color: #000;
+    transform: skew(45deg);
+    border: var(--line-width) solid var(--line-color);
+    box-sizing: content-box; 
+}
