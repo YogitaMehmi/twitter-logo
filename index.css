@@ -21,14 +21,26 @@ body {
     height: calc(var(--height) + calc(var(--line-width) * 2));
     width: var(--line-width);
     background-color: var(--line-color);
-    transform: skew(-45deg);
+    opacity: 0;
+    transition: all .5s ease;
 }
 
 .line2 {
     height: var(--height);
     width: 40px;
     background-color: #000;
-    transform: skew(45deg);
     border: var(--line-width) solid var(--line-color);
     box-sizing: content-box; 
+    transition: all .5s ease;
+}
+
+.logo:hover .line1 {
+    transform: skew(-50deg);
+    opacity: 1;
+    box-shadow: 0 0 15px 7px #f00;
+}
+
+.logo:hover .line2 {
+    transform: skew(45deg) translate(-50%);
+    box-shadow: inset 0 0 20px 5px #f00;
 }
